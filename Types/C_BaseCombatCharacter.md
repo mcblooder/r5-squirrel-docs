@@ -1,7 +1,7 @@
 | Squirrel Name | Type Info | Comment |
 | ------------- | --------- | ------- |
-| AddSharedEnergy | float | int amount -> void  |  |
-| CanUseSharedEnergy | float | int -> bool |  |
+| AddSharedEnergy | float \| int amount -> void  |  |
+| CanUseSharedEnergy | float \| int -> bool |  |
 | ClearOffhand | () -> void | Clear the player's offhand ability |
 | ContextAction_ClearBeingRevived | () -> void | Marks the entity as no longer being revived |
 | ContextAction_ClearBusy | () -> void | Marks the entity as no longer doing some kind of context action |
@@ -66,8 +66,8 @@
 | SetSelectedOffhand | eActiveInventorySlot slot, entity weapon -> void |  |
 | SetSharedEnergyLockoutThreshold | int threshold -> void |  |
 | SetSharedEnergyPenaltyDuration | float duration -> void |  |
-| SetSharedEnergyRegenDelay | float | int -> void |  |
+| SetSharedEnergyRegenDelay | float \| int -> void |  |
 | SetSharedEnergyRegenRate | int -> void |  |
-| SetSharedEnergyTotal | float | int -> void |  |
-| TakeSharedEnergy | float | int amount -> void |  |
+| SetSharedEnergyTotal | float \| int -> void |  |
+| TakeSharedEnergy | float \| int amount -> void |  |
 |  |  |  |

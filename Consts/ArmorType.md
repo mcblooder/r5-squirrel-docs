@@ -1,0 +1,3 @@
+ArmorType
+* ARMORTYPE_NORMAL = 0
+* ARMORTYPE_HEAVY = 1
