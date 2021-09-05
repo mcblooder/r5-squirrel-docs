@@ -1,4 +1,10 @@
-R5 S3 Squirrel methods, either global or undefined what type they correspond to
+R5 S3 Squirrel methods, either global or undefined what type they correspond to.
+
+TODO: 
+* Mark SERVER / CLIENT / UI methods
+* Type Info add nullability information? `ornull`
+
+
 | Squirrel Name | Type Info | Comment |
 | ------------- | --------- | ------- |
 | Chroma_SetBaseLayer | int CHROMALOOP_anim, int CHROMATRANS_transition, table< float, vector > gradient, float transitionTime, float animRate = 1.0 | Sets the base layer animation for chroma hardware. gradient  maps values 0-1 to colors |

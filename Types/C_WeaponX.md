@@ -63,7 +63,7 @@
 | GetMods | () -> array< string > | Get an array of mods active on this weapon |
 | GetMods_WithQueued | () -> array< string > | Get an array of mods active or queued on this weapon |
 | GetNPCMissFastPlayer | () -> bool |  |
-| GetNextAttackAllowedTime | () -> float | Get this weapon',27h,'s internal when-can-I-shoot-next time |
+| GetNextAttackAllowedTime | () -> float | Get this weapon's internal when-can-I-shoot-next time |
 | GetNextAttackAllowedTimeRaw | () -> float | Get this weapon's internal when-can-I-shoot-next time, ignoring the "ready" timer |
 | GetProScreenFloatValForIndex | int index -> int |  |
 | GetProScreenIntValForIndex | int index -> int |  |
@@ -80,7 +80,7 @@
 | GetSustainedDischargePulseFrequency | () -> float | Gets the frequency at which pulse callbacks are dispatched if enabled. Also controls frequency of sustained laser damage |
 | GetSustainedDischargeRemainder | () -> float | Gets the time remaining for the current sustained discharge between |
 | GetWeaponActivity | () -> Activity | Gets the activity that the weapon is in |
-| GetWeaponAmmoPoolType | () -> int | Gets the ammo pool type this weapon uses |
+| GetWeaponAmmoPoolType | () -> eAmmoPoolType | Gets the ammo pool type this weapon uses |
 | GetWeaponBurstFireCount | () -> int | Get the burst fire count |
 | GetWeaponChargeEnergyCost | () -> int |  |
 | GetWeaponChargeFraction | () -> float | Returns fraction \[0,1\] where the charge level is |
@@ -166,11 +166,11 @@
 | SetLifetimeShotsRemainingInfinite | () -> void |  |
 | SetModBitField | int bitfield -> void | Sets mods bit field |
 | SetMods | array< string > mods -> void | Reset and apply active mods on a weapon |
-| SetNextAttackAllowedTime | float time -> void | Set this weapon',27h,'s internal when-can-I-shoot-next time |
+| SetNextAttackAllowedTime | float time -> void | Set this weapon's internal when-can-I-shoot-next time |
 | SetScriptFlags0 | int flags -> void |  |
 | SetScriptInt0 | int -> void |  |
 | SetScriptTime0 | float time -> void |  |
-| SetSustainedDischargeFractionForced | flaot fraction -> void | Forces the discharge to be at a certain fraction |
+| SetSustainedDischargeFractionForced | float fraction -> void | Forces the discharge to be at a certain fraction |
 | SetViewmodelAmmoModelIndex | int index -> void | Set the index for bodygroup "ammo", if it exists |
 | SetWeaponBurstFireCount | int burstFireCount -> void | Set the burst fire count |
 | SetWeaponCamo | int -> void | Sets the camo index on the weapon |
@@ -182,7 +182,7 @@
 | SetWeaponPrimaryAmmoCount | AmmoSource source, int count -> void | Set the amount of primary ammo |
 | SetWeaponPrimaryClipCount | int count -> void | Set the amount of primary ammo in the clip |
 | SetWeaponPrimaryClipCountAbsolute | int count -> void | Set the amount of primary ammo in the clip |
-| SetWeaponPrimaryClipCountNoRegenReset | int count | Sets primary ammo count, doesn',27h,'t reset regen |
+| SetWeaponPrimaryClipCountNoRegenReset | int count | Sets primary ammo count, doesn't reset regen |
 | SetWeaponSkin | int -> void | Sets the skin index on the weapon |
 | ShouldAutoCycleWhenOutOfAmmo | () -> bool |  |
 | ShouldPredictProjectiles | () -> bool | Returns true if it is appropriate to fire predicted projectiles on the client |
@@ -198,6 +198,7 @@
 | SmartAmmo_IsEnabled | () -> bool | Returns true if smart ammo tracking is enabled |
 | SmartAmmo_IsVisibleTarget | entity target | Returns true if the given target is visible to the weapon |
 | SmartAmmo_SetNewTargetTime | float time -> void | Let script inform code it started locking on a new target in this tick |
+| SmartAmmo_SetTarget | entity, float -> void | Appends new smart ammo target if not already in the list |
 | SmartAmmo_StoreTargets | () -> void | Stores the current list of smart ammo targets for later retrieval |
 | SmartAmmo_TrackEntity | entity target, float duration -> void | Marks an entity as trackable by the smart ammo system |
 | SmartAmmo_UntrackEntity | entity target -> void | Clears an entity as trackable by the smart ammo system |
