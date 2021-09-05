@@ -1,5 +1,5 @@
 InputCommand
-* IN_USE_ALT = 2147483648
+* IN_USE_ALT = -2147483648
 * IN_ATTACK = 1
 * IN_JUMP = 2
 * IN_DUCK = 4

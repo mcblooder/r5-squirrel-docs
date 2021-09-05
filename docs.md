@@ -1,4 +1,5 @@
-R5 S3 Squirrel methods, either global or undefined what type they correspond to.
+
+## R5 S3 Squirrel methods, either global or undefined what type they correspond to.
 
 TODO: 
 * Mark SERVER / CLIENT / UI methods
