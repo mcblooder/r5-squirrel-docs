@@ -1,0 +1,2 @@
+AIPriority
+* AI_PRIORITY_NO_THREAT = -1
