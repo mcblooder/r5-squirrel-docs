@@ -1,4 +1,4 @@
-C_BaseCombatCharacter: C_BaseEntity
+C_BaseCombatCharacter: C_BaseAnimating
 | Squirrel Name | Type Info | Comment |
 | ------------- | --------- | ------- |
 | AddSharedEnergy | float \| int amount -> void  |  |
