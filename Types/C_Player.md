@@ -3,7 +3,7 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | Squirrel Name | Type Info | Comment |
 | ------------- | --------- | ------- |
 | AmmoPool_GetCapacity | () -> int | Get the capacity of the ammo pool |
-| AmmoPool_GetCount | eAmmoPoolType ammoType -> int | Get the ammo count in the ammo pool |
+| AmmoPool_GetCount | [eAmmoPoolType](../Consts/eAmmoPoolType.md) ammoType -> int | Get the ammo count in the ammo pool |
 | CameraAngles | () -> vector | Get current camera angles |
 | CameraPosition | () -> vector | Get current camera position |
 | CanStand | () -> bool | Returns true if the player is already standing or has space to stand |
@@ -13,7 +13,7 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | ClearMenuCameraEntity | () -> void | Clears overrides of the view entity on the client only |
 | ClientCommand | string command -> void | Execute command on this client |
 | CockpitJolt | vector, float -> void |  |
-| ConsumableInventory_Get | () -> array< ConsumableInventoryItem > | Get the consumable inventory |
+| ConsumableInventory_Get | () -> array< [ConsumableInventoryItem](../Types/ConsumableInventoryItem.md) > | Get the consumable inventory |
 | ConsumableInventory_GetCount | () -> int | Get the number of filled slots in the consumable inventory |
 | CreateClientPointCamera |  | Creates a client point camera |
 | DelayEnableWeaponWithSlowDeploy | float delay -> void | Enable the player's weapon with delay |
@@ -31,8 +31,8 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | GetAbilityDownBinding |  | Gets the TAPPED or HELD binding for the given +ability command |
 | GetAbilityUpBinding |  | Gets the TAPPED or HELD binding for the given +ability command |
 | GetAdsFraction | () -> float | Get the current ADS fraction amount \[0-1\] |
-| GetBleedoutState | () -> BleedoutState |  |
-| GetCinematicEventFlags | () -> CinematicEventFlags |  |
+| GetBleedoutState | () -> [BleedoutState](../Consts/BleedoutState.md) |  |
+| GetCinematicEventFlags | () -> [CinematicEventFlags](../Consts/CinematicEventFlags.md) |  |
 | GetClassPosCount | () -> int |  |
 | GetCockpit | () -> entity | Gets the player cockpit entity |
 | GetCommunityName | () -> string | Gets the name of the community this player is currently playing in |
@@ -68,7 +68,7 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | GetObjectiveEndTime | () -> float | Get time when the object will expire |
 | GetObjectiveEntity | () -> entity | Get entity that client script can use for objective |
 | GetObjectiveIndex | () -> int | Get index that client script can use for objective info |
-| GetObserverMode | () -> ObserverMode | Returns the player's observer mode |
+| GetObserverMode | () -> [ObserverMode](../Consts/ObserverMode.md) | Returns the player's observer mode |
 | GetObserverTarget | () -> entity | Returns the player's observer target |
 | GetOutOfBoundsDeadTime | () -> float | Returns time that the player will die if he stays out of bounds |
 | GetPINNucleusId |  |  |
@@ -77,12 +77,12 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | GetPersistentVar | string varName -> result | May return any type |
 | GetPersistentVarAsInt | string varName -> int |  |
 | GetPetTitan | () -> entity | Returns the player's pet titan |
-| GetPetTitanMode | () -> eNPCTitanMode | Returns the player's pet titan mode |
+| GetPetTitanMode | () -> [eNPCTitanMode](../Consts/eNPCTitanMode.md) | Returns the player's pet titan mode |
 | GetPilotClassIndex | () -> int | Get the players pilot class index |
 | GetPlatformUID | () -> string | Gets the player's UID |
 | GetPlayerClass | () -> string | What general class is the player (pilot/titan) |
 | GetPlayerClassName |  | What class is the player |
-| GetPlayerGameStat | PlayerGameStat stat -> int |  |
+| GetPlayerGameStat | [PlayerGameStat](../Consts/PlayerGameStat.md) stat -> int |  |
 | GetPlayerGeneralClassName |  |  |
 | GetPlayerMaxs | () -> vector | Returns player's maximum bounds |
 | GetPlayerMins | () -> vector | Returns player's minimum bounds |
@@ -146,7 +146,7 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | HasClassMod | string mod -> bool | Given (string), returns true if mod is active on this player |
 | HasGrapple | () -> bool | Returns whether this player has grapple available in general |
 | HasMic | () -> bool | Returns true if the player has a mic plugged in |
-| HasPassive | ePassives passive -> bool |  |
+| HasPassive | [ePassives](../Consts/ePassives.md) passive -> bool |  |
 | HasThirdPersonAttackFocus | () -> bool |  |
 | HasUsePrompt | () -> bool | Returns whether the player has a use prompt |
 | HideCrosshairNames | () -> void | Suppress drawing of player/AI names on the HUD |
@@ -167,9 +167,9 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | IsHovering | () -> bool | Returns true if the player is currently hovering |
 | IsInAirSlowMo | () -> bool | Returns true if the player is in air slowmo |
 | IsInThirdPersonReplay | () -> bool | Returns if this player is in a third person replay (usually when killed by AI) |
-| IsInputCommandHeld | InputCommand command -> bool | Indicates if the specified input command is being pressed. Only works for the local view player |
-| IsInputCommandPressed | InputCommand command -> bool | Indicates if the specified input command was pressed this frame. Only works for the local view player |
-| IsInputCommandReleased | InputCommand command -> bool | Indicates if the specified input command was released this frame. Only works for the local view player |
+| IsInputCommandHeld | [InputCommand](../Consts/InputCommand.md) command -> bool | Indicates if the specified input command is being pressed. Only works for the local view player |
+| IsInputCommandPressed | [InputCommand](../Consts/InputCommand.md) command -> bool | Indicates if the specified input command was pressed this frame. Only works for the local view player |
+| IsInputCommandReleased | [InputCommand](../Consts/InputCommand.md) command -> bool | Indicates if the specified input command was released this frame. Only works for the local view player |
 | IsInventoryOpen | () -> bool | Returns true if code thinks the player's inventory screen is open |
 | IsMantling | () -> bool | Returns whether the player is mantling |
 | IsMountingZipline | () -> bool | Returns true if the player is mounting a zipline |
@@ -187,7 +187,7 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | IsThirdPersonObserver | () -> bool |  |
 | IsThirdPersonShoulderModeOn | () -> bool | Returns whether the player is in third person mode |
 | IsTraversing | () -> bool | Returns whether the player is traversing (i.e. mantle or window anims) |
-| IsUserCommandButtonHeld | InputCommand command -> bool | Looks at the latest raw usercommand input for the given local player |
+| IsUserCommandButtonHeld | [InputCommand](../Consts/InputCommand.md) command -> bool | Looks at the latest raw usercommand input for the given local player |
 | IsVoiceMuted | () -> bool | Returns true if the player is muted |
 | IsWallHanging | () -> bool | Returns whether the player is wall-hanging |
 | IsWallRunning | () -> bool | Returns whether the player is wallrunning |
@@ -216,17 +216,17 @@ C_Player: C_BaseCombatCharacter - Base player client-side
 | Lunge_SetTargetEntity | entity target -> void | Make the player lerp towards the given target |
 | Lunge_SetTargetPosition | vector position -> void | Make the player lerp towards the given position |
 | MayGrapple | () -> bool | Returns whether this player can grapple the surface they're looking at |
-| ModInventory_Get | () -> array< ModInventoryItem > | Get the mod inventory |
+| ModInventory_Get | () -> array< [ModInventoryItem](../Types/ModInventoryItem.md) > | Get the mod inventory |
 | ModInventory_GetCount | () -> int | Get the number of filled slots in the mod inventory |
 | PlayerMelee_EndAttack | () -> void | Let code know a melee attack has ended |
 | PlayerMelee_GetAttackHitEntity | () -> _possibly_ bool or entity | Let script query whether the melee attack hit flag has been set |
-| PlayerMelee_GetState | () -> PlayerMeleeState | Gets scripted melee state (arbitrary integer) |
+| PlayerMelee_GetState | () -> [PlayerMeleeState](../Consts/PlayerMeleeState.md) | Gets scripted melee state (arbitrary integer) |
 | PlayerMelee_IsAttackActive | () -> bool | Let script query whether a melee attack is currently started |
 | PlayerMelee_IsSprintAttack | () -> bool | Returns true if currently doing a melee attack and the attack was started while sprinting |
 | PlayerMelee_SetAttackHitEntity | entity target -> void | Let code know the melee attack hit something (so code will stop the lunge movement) |
 | PlayerMelee_SetAttackRecoveryShouldBeQuick | bool quick -> void |  |
-| PlayerMelee_SetState | PlayerMeleeState state -> void | Sets scripted melee state (arbitrary integer) |
-| PlayerMelee_StartAttack | PlayerMeleeState state -> void | Let code know a melee attack has started |
+| PlayerMelee_SetState | [PlayerMeleeState](../Consts/PlayerMeleeState.md) state -> void | Sets scripted melee state (arbitrary integer) |
+| PlayerMelee_StartAttack | [PlayerMeleeState](../Consts/PlayerMeleeState.md) state -> void | Let code know a melee attack has started |
 | Player_GetFreefallAnticipateEndTime | () -> float | Return time freefall anticipation ended |
 | Player_GetFreefallAnticipateStartTime | () -> float | Return time freefall anticipation started |
 | Player_GetFreefallDistanceToLand | () -> float |  |

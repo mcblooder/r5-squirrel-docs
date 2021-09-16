@@ -1,3 +1,4 @@
+C_BaseCombatCharacter: C_BaseEntity
 | Squirrel Name | Type Info | Comment |
 | ------------- | --------- | ------- |
 | AddSharedEnergy | float \| int amount -> void  |  |
@@ -28,31 +29,31 @@
 | ContextAction_SetReviving | () -> void | Marks the entity as executing a revive |
 | DisablePhaseShiftFlags | () -> void |  |
 | EnablePhaseShiftFlags | () -> void |  |
-| GetActiveWeapon | eActiveInventorySlot slot -> entity | Returns the active weapon |
+| GetActiveWeapon | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> entity | Returns the active weapon |
 | GetActiveWeaponPrimaryAmmoLoaded | int -> int | Get the amount of currently loaded ammo in the active weapon |
 | GetAllActiveWeapons | () -> array< entity > | Returns all active weapons. Array indices will not match active weapon slot values and the array will have no null elements |
 | GetAntiTitanWeapon | () -> entity | Returns the anti titan weapon |
 | GetEntityAtPhaseShiftExitPosition | () -> entity | Gets the entity you are about to phase shift into |
 | GetLastFiredTime | () -> float | Returns the last time palyer or NPC fired |
-| GetLatestPrimaryWeapon | eActiveInventorySlot slot -> entity | Returns the last primary weapon used |
-| GetLatestPrimaryWeaponForIndexZeroOrOne | eActiveInventorySlot slot -> entity |  |
+| GetLatestPrimaryWeapon | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> entity | Returns the last primary weapon used |
+| GetLatestPrimaryWeaponForIndexZeroOrOne | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> entity |  |
 | GetMainWeapons | () -> array< entity > | Get array of the main weapons |
-| GetNormalWeapon | WeaponInventorySlot slot -> entity | Get the normal weapon in the specified slot |
-| GetOffhandWeapon | Offhand offhand -> entity | Get the offhand weapon in the specified slot |
+| GetNormalWeapon | [WeaponInventorySlot](../Consts/WeaponInventorySlot.md) slot -> entity | Get the normal weapon in the specified slot |
+| GetOffhandWeapon | [Offhand](../Consts/Offhand.md) offhand -> entity | Get the offhand weapon in the specified slot |
 | GetOffhandWeapons | () -> array< entity > | Get array of the offhand weapons |
 | GetPlayerOrNPCViewVector | () -> vector | Gets the view vector of a player or NPC. Prefer GetViewVector or GetNPCViewVector when you know whether you're working with a player or NPC |
-| GetSelectedWeapon | eActiveInventorySlot slot -> entity | Returns the selected weapon |
+| GetSelectedWeapon | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> entity | Returns the selected weapon |
 | GetSharedEnergyCount | () -> float |  |
 | GetSharedEnergyRegenDelay | float -> void |  |
 | GetSharedEnergyRegenRate | () -> float |  |
 | GetSharedEnergyTotal | () -> float |  |
 | GetSidearmWeapon | () -> entity |  |
 | GetTitanSoul | () -> entity | Gets the titanSoul for this entity |
-| GetWeaponDisableFlags | () -> WeaponDisableFlags | Returns the weapon disable flags that are active |
+| GetWeaponDisableFlags | () -> [WeaponDisableFlags](../Consts/WeaponDisableFlags.md) | Returns the weapon disable flags that are active |
 | IsPhaseShiftedOrPending | () -> bool |  |
-| IsSwitching | WeaponInventorySlot slot -> bool | Returns true if the player is switching weapons in the specified slot |
-| IsUsingOffhandWeapon | eActiveInventorySlot slot -> bool | Returns true if player is using an offhand weapon in the active slot |
-| IsWeaponSlotDisabled | eActiveInventorySlot slot -> bool | Returns true if the weapon slot is disabled |
+| IsSwitching | [WeaponInventorySlot](../Consts/WeaponInventorySlot.md) slot -> bool | Returns true if the player is switching weapons in the specified slot |
+| IsUsingOffhandWeapon | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> bool | Returns true if player is using an offhand weapon in the active slot |
+| IsWeaponSlotDisabled | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot -> bool | Returns true if the weapon slot is disabled |
 | OffsetFromViewAngles | vector offset -> vector | Returns angles that has been offset relative to the view |
 | OffsetPositionFromView | vector baseStartPos, vector offset -> vector | Returns position that has been offset relative to the view |
 | PhaseShiftBegin | float warmupTime, float duration -> void |  |
@@ -63,7 +64,7 @@
 | PlayerMelee_ExecutionEndTarget | () -> void | Let script tell code a melee attack has ended (for the target/victim) |
 | PlayerMelee_ExecutionStartAttacker | float duration -> void | Let script tell code a melee attack has started (for the attacker) |
 | PlayerMelee_ExecutionStartTarget | entity attacker -> void | Let script tell code a melee attack has started (for the target/victim) |
-| SetSelectedOffhand | eActiveInventorySlot slot, entity weapon -> void |  |
+| SetSelectedOffhand | [eActiveInventorySlot](../Consts/eActiveInventorySlot.md) slot, entity weapon -> void |  |
 | SetSharedEnergyLockoutThreshold | int threshold -> void |  |
 | SetSharedEnergyPenaltyDuration | float duration -> void |  |
 | SetSharedEnergyRegenDelay | float \| int -> void |  |

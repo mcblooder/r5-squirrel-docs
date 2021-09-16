@@ -14,17 +14,17 @@
 | EmitWeaponNpcSound_DontUpdateLastFiredTime | float radius, float -> void | Notifies NPCs of weapon sound |
 | EmitWeaponSound | string -> void | Plays the sound on the weapon |
 | EmitWeaponSound_1p3p | string soundName1p, string soundName3p -> void | Plays appropriate 1p and 3p sounds |
-| FireWeaponBolt | WeaponFireBoltParams params -> void | Fires a bolt projectile |
-| FireWeaponBoltAndReturnEntity | WeaponFireBoltParams params -> entity | Fires a bolt projectile and returns the entity (bolt) to script |
+| FireWeaponBolt | [WeaponFireBoltParams](../Types/WeaponFireBoltParams.md) params -> void | Fires a bolt projectile |
+| FireWeaponBoltAndReturnEntity | [WeaponFireBoltParams](../Types/WeaponFireBoltParams.md) params -> entity | Fires a bolt projectile and returns the entity (bolt) to script |
 | FireWeaponBullet | vector position, vector direction, int, int weaponDamageFlags -> void | Fires a bullet |
-| FireWeaponBullet_Special | WeaponFireBulletSpecialParams params -> void | Fires a bullet, can set to skip lag compensation, have zero spread, dryfire, or only cause a whizby sound |
-| FireWeaponGrenade | WeaponFireGrenadeParams params -> entity | Fires a grenade projectile and returns the entity (grenade) to script |
-| FireWeaponMissile | WeaponFireMissileParams params -> entity | Fires a missile projectile and returns the entity (missile) to script |
+| FireWeaponBullet_Special | [WeaponFireBulletSpecialParams](../Types/WeaponFireBulletSpecialParams.md) params -> void | Fires a bullet, can set to skip lag compensation, have zero spread, dryfire, or only cause a whizby sound |
+| FireWeaponGrenade | [WeaponFireGrenadeParams](../Types/WeaponFireGrenadeParams.md) params -> entity | Fires a grenade projectile and returns the entity (grenade) to script |
+| FireWeaponMissile | [WeaponFireMissileParams](../Types/WeaponFireMissileParams.md) params -> entity | Fires a missile projectile and returns the entity (missile) to script |
 | FireWeapon_Default | vector pos, vector dir, float speed, float patternScale, bool ignoreSpread -> void | Fires the weapon once as per weaponsettings, in a scaled blast pattern (if one is specified) |
 | ForceCooldownMilestone | int newMilestone -> void |  |
 | ForceRechamberMilestone | int newMilestone -> void |  |
 | ForceRelease | () -> void | Forces the offhand weapon to release |
-| GetActiveAmmoSource | () -> AmmoSource | Get the ammo source this weapon is using |
+| GetActiveAmmoSource | () -> [AmmoSource](../Consts/AmmoSource.md) | Get the ammo source this weapon is using |
 | GetAllowHeadShots | () -> bool | Does this weapon allow for headshot damage |
 | GetAmmoDisplay |  | Gets the display type of the ammo |
 | GetAmmoPerShot | () -> int | Gets the ammo consumed per shot |
@@ -43,8 +43,8 @@
 | GetCurrentWeaponCharm | () -> entity | Get weapon charm for the weapon |
 | GetCustomActivityDuration | () -> float | Returns the duration of the current custom weapon activity |
 | GetCustomActivityFraction | () -> float | Returns the fraction of the current custom weapon activity that is complete |
-| GetDamageAmountForArmorType | ArmorType armorType -> int |  |
-| GetDamageSourceID | () -> eDamageSourceId | Gets the damage source ID for this weapon |
+| GetDamageAmountForArmorType | [ArmorType](../Consts/ArmorType.md) armorType -> int |  |
+| GetDamageSourceID | () -> [eDamageSourceId](../Consts/eDamageSourceId.md) | Gets the damage source ID for this weapon |
 | GetForcedADS | () -> bool | Gets whether or not the player is forced into ads |
 | GetGrenadeFuseTime | () -> float |  |
 | GetGrenadeIgnitionTime | () -> float |  |
@@ -79,8 +79,8 @@
 | GetSustainedDischargeFraction | () -> float | Gets the fraction of completion for the current sustained discharge between \[0, 1\] |
 | GetSustainedDischargePulseFrequency | () -> float | Gets the frequency at which pulse callbacks are dispatched if enabled. Also controls frequency of sustained laser damage |
 | GetSustainedDischargeRemainder | () -> float | Gets the time remaining for the current sustained discharge between |
-| GetWeaponActivity | () -> Activity | Gets the activity that the weapon is in |
-| GetWeaponAmmoPoolType | () -> eAmmoPoolType | Gets the ammo pool type this weapon uses |
+| GetWeaponActivity | () -> [Activity](../Consts/Activity.md) | Gets the activity that the weapon is in |
+| GetWeaponAmmoPoolType | () -> [eAmmoPoolType](../Consts/eAmmoPoolType.md) | Gets the ammo pool type this weapon uses |
 | GetWeaponBurstFireCount | () -> int | Get the burst fire count |
 | GetWeaponChargeEnergyCost | () -> int |  |
 | GetWeaponChargeFraction | () -> float | Returns fraction \[0,1\] where the charge level is |
@@ -92,7 +92,7 @@
 | GetWeaponClass | () -> string | Gets the string specified in the weapon's .txt file for weaponClass (human \| titan \| drone) |
 | GetWeaponClassName | () -> string | Returns the class name of the weapon |
 | GetWeaponCurrentEnergyCost | () -> int |  |
-| GetWeaponDamageFlags | () -> DamageFlags |  |
+| GetWeaponDamageFlags | () -> [DamageFlags](../Consts/DamageFlags.md) |  |
 | GetWeaponDamageForce | () -> float |  |
 | GetWeaponDefaultEnergyCost |  |  |
 | GetWeaponDescription | () -> string | Returns the description of the weapon |
@@ -100,23 +100,23 @@
 | GetWeaponInfoFileKeyField | string key -> ? | Resolves a string key to its value in this weapons info file |
 | GetWeaponInfoFileKeyFieldAsset | string key -> asset | Resolves a string key to its asset in this weapons info file |
 | GetWeaponOwner | () -> entity | Returns entity using the weapon |
-| GetWeaponPrimaryAmmoCount | AmmoSource source -> int | Get the amount of ammo available for this weapon to use |
-| GetWeaponPrimaryAmmoCountMax | AmmoSource source -> int | Get the max ammo that can be available for this weapon to use |
+| GetWeaponPrimaryAmmoCount | [AmmoSource](../Consts/AmmoSource.md) source -> int | Get the amount of ammo available for this weapon to use |
+| GetWeaponPrimaryAmmoCountMax | [AmmoSource](../Consts/AmmoSource.md) source -> int | Get the max ammo that can be available for this weapon to use |
 | GetWeaponPrimaryClipCount | () -> int | Returns the amount of primary ammo in the clip |
 | GetWeaponPrimaryClipCountMax | () -> int | Returns the max amount of primary ammo that can be in the clip |
 | GetWeaponPrintName | () -> string | Returns the display name of the weapon |
 | GetWeaponReadyHint |  |  |
 | GetWeaponReadyMsg |  |  |
 | GetWeaponReadyToFireProgress | () -> float |  |
-| GetWeaponSettingAsset | eWeaponVar weaponVar -> asset | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingBool | eWeaponVar weaponVar -> bool | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingEnum | eWeaponVar weaponVar, table enumType -> int | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingFloat | eWeaponVar weaponVar -> float | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingInt | eWeaponVar weaponVar -> int | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingString | eWeaponVar weaponVar -> string | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
-| GetWeaponSettingVector | eWeaponVar weaponVar -> vector | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingAsset | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> asset | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingBool | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> bool | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingEnum | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar, table enumType -> int | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingFloat | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> float | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingInt | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> int | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingString | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> string | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
+| GetWeaponSettingVector | [eWeaponVar](../Consts/eWeaponVar.md) weaponVar -> vector | Retrieve a weapon's current setting. Must be a valid modable eWeaponVar |
 | GetWeaponShieldScale | () -> float |  |
-| GetWeaponType | () -> WeaponType | Returns weapon type |
+| GetWeaponType | () -> [WeaponType](../Consts/WeaponType.md) | Returns weapon type |
 | GetWeaponTypeFlags | () -> int | Get Weapon Type Flags |
 | GetWeaponUtilityEntity | () -> entity | Get the weapon's utility entity |
 | GetWeaponViewmodel | () -> entity | Gets the viewmodel for the weapon. Viewmodels are only valid for active player weapons |
@@ -179,7 +179,7 @@
 | SetWeaponCharm | asset weaponCharmModel, string attachmentName -> void | Set weapon charm for the model. This spawns an entity with the provided model and attach it to the CHARM attachment on the weapon |
 | SetWeaponCharmIndex | int charmScriptIndex -> void | Set script index for weapon charm |
 | SetWeaponEnergyCost | int cost -> void |  |
-| SetWeaponPrimaryAmmoCount | AmmoSource source, int count -> void | Set the amount of primary ammo |
+| SetWeaponPrimaryAmmoCount | [AmmoSource](../Consts/AmmoSource.md) source, int count -> void | Set the amount of primary ammo |
 | SetWeaponPrimaryClipCount | int count -> void | Set the amount of primary ammo in the clip |
 | SetWeaponPrimaryClipCountAbsolute | int count -> void | Set the amount of primary ammo in the clip |
 | SetWeaponPrimaryClipCountNoRegenReset | int count | Sets primary ammo count, doesn't reset regen |
@@ -193,7 +193,7 @@
 | SmartAmmo_GetNumTrackersOnEntity | entity target -> int | Returns number of trackers currently on entity |
 | SmartAmmo_GetSearchAngle | () -> float | Returns the angle used by the smart ammo cone search |
 | SmartAmmo_GetStoredTarget | () -> array< entity > | Returns the list of targets that was last stored |
-| SmartAmmo_GetTargets | () -> array< SmartAmmoTarget > | Returns a list of targets currently being tracked by the smart ammo system and their current and previous lock fractions |
+| SmartAmmo_GetTargets | () -> array< [SmartAmmoTarget](../Types/SmartAmmoTarget.md) > | Returns a list of targets currently being tracked by the smart ammo system and their current and previous lock fractions |
 | SmartAmmo_GetTrackedEntities | () -> array< entity > | Returns array of all entities currently tracked by this weapon |
 | SmartAmmo_IsEnabled | () -> bool | Returns true if smart ammo tracking is enabled |
 | SmartAmmo_IsVisibleTarget | entity target | Returns true if the given target is visible to the weapon |

@@ -15,7 +15,7 @@ TODO:
 | Chroma_SetPersistentOverlayAlpha | int handle, float alpha | Sets the overall opacity of a persistent chroma overlay |
 | Dev_GetAISettingByKeyField | _possibly_ return type is an asset, may be bool, int etc... | Get AI setting key field |
 | Dev_GetAISettingAssetByKeyField_Global | string settingsName, string | Slow dev ONLY. Given a player setting name and key, resolves a string key to its asset value in that setting info file |
-| GetAIClass | () -> AIClass | Gets the AI Class |
+| GetAIClass | () -> [AIClass](Consts/AIClass.md) | Gets the AI Class |
 | GetAIClassName | () | Gets the AI Class |
 | GetTitanSoulNetBool | string networkVariableName -> bool | Gets a bool network variable on the titan soul (see RegisterNetworkedVariable) |
 | GetTitanSoulNetFloat | string networkVariableName -> float | Gets a float network variable on the titan soul (see RegisterNetworkedVariable) |
@@ -30,5 +30,5 @@ TODO:
 | AnimSyncScriptProp_Begin | entity parentEntity, float startCycle, float endCycle, string windowName | Force sync the animation of the created anim prop entity with the parent entity |
 | AnimSyncScriptProp_End | entity parentEntity |  |
 | TraceToLocalPlayerSimple | () -> float | Get deferred trace fraction from eye to local player eye. Used on NPC's |
-| TraceToLocalPlayer | () -> TraceResults ornull | Get deferred trace result from eye to local player eye, return NULL if deferred trace is not available |
+| TraceToLocalPlayer | () -> [TraceResults](Types/TraceResults.md) ornull | Get deferred trace result from eye to local player eye, return NULL if deferred trace is not available |
 |  |  |  |

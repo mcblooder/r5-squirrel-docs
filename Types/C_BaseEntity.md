@@ -42,7 +42,7 @@ C_BaseEntity: Root class of all entities
 | DoesShareRealms | entity otherEntity -> bool | Check if the entity shares a realm with this entity | + | + |
 | DontIncludeParentBbox | () -> void | Don't create a giant bounding box even though we are attached to an attachment | + | + |
 | DumpParentingState | () -> void | Prints information about the entity's parenting | + |  |
-| EnableAttackableByAI | AIPriority priority, int extraPriority, AIAPFlag extraPriorityFlags -> void | Make AI treat this as a threat. Compare priority with values set in player and AI settings files. Flags are prefixed AI_AP_FLAG_* | + |  |
+| EnableAttackableByAI | [AIPriority](../Consts/AIPriority.md) priority, int extraPriority, [AIAPFlag](../Consts/AIAPFlag.md) extraPriorityFlags -> void | Make AI treat this as a threat. Compare priority with values set in player and AI settings files. Flags are prefixed AI_AP_FLAG_* | + |  |
 | EnableDraw | () -> void | Draw this entity |  | + |
 | EnableGrappleAttachment | () -> void | Prevents grapple from attaching to this entity | + |  |
 | EnableHealthChangedCallback | () -> void | Registers the entity to have the script function ClientCallback_OnHealthChanged called when their health changes |  | + |
@@ -61,7 +61,7 @@ C_BaseEntity: Root class of all entities
 | GetAbsVelocity | () -> vector |  | + | + |
 | GetAngles | () -> vector | Get entity pitch, yaw, roll as a vector | + | + |
 | GetAngularVelocity | () -> vector | Get the local angular velocity - returns a vector of pitch,yaw,roll | + |  |
-| GetArmorType | () -> ArmorType | Get the entity's armor type | + | + |
+| GetArmorType | () -> [ArmorType](../Consts/ArmorType.md) | Get the entity's armor type | + | + |
 | GetBaseVelocity | () -> vector | Gets the "base" velocity, typically given to an entity from the last pusher it touched | + |  |
 | GetBlocksLOS | () -> bool | Gets whether this entity will block AI LOS | + |  |
 | GetBlocksRadiusDamage | () -> bool | Gets whether this flag is set | + |  |
@@ -115,7 +115,7 @@ C_BaseEntity: Root class of all entities
 | GetParentHitbox | () -> int | Gives the index of the hitbox that we are parented to | + | + |
 | GetPassDamageToParent | () -> bool |  | + |  |
 | GetPassThroughFlags | () -> int |  | + | + |
-| GetPhysics | () -> MoveType | Gets the move type | + | + |
+| GetPhysics | () -> [MoveType](../Consts/MoveType.md) | Gets the move type | + | + |
 | GetPhysicsSolidMask | () -> int | Gets the solid mask for this entity | + |  |
 | GetPreTemplateName | () -> string | Get the entity name stripped of template unique decoration | + | + |
 | GetPusher | () -> bool | Sets whether this entity pushes other entities | + |  |
@@ -155,36 +155,36 @@ C_BaseEntity: Root class of all entities
 | HighlightEnableForTeam | int team -> void |  | + | + |
 | HighlightSetTeamBitField | int -> void |  | + | + |
 | Highlight_Enable | () -> void | Enable highlighting on this entity | + | + |
-| Highlight_GetCurrentContext | () -> HighlightContext | Get the current highlight context | + | + |
+| Highlight_GetCurrentContext | () -> [HighlightContext](../Consts/HighlightContext.md) | Get the current highlight context | + | + |
 | Highlight_GetCurrentInsideOpacity | () -> float | Get the inside opacity on the current context | + | + |
 | Highlight_GetCurrentOutlineOpacity | () -> float | Get the outline opacity on the current context | + | + |
 | Highlight_GetFarFadeDist | () -> float | Gets far fade dist |  | + |
-| Highlight_GetFlag | HighlightFlag flag -> bool | Gets whether or not a flag is active on a highlight |  | + |
+| Highlight_GetFlag | [HighlightFlag](../Consts/HighlightFlag.md) flag -> bool | Gets whether or not a flag is active on a highlight |  | + |
 | Highlight_GetInheritHighlight | () -> bool | Tells if this entity can inherit the highlighting settings from a parent entity if there is no local settings | + | + |
-| Highlight_GetInsideFunction | HighlightContext contextId -> int | Get the inside function slot on the given context. 0 for a disabled a function | + | + |
+| Highlight_GetInsideFunction | [HighlightContext](../Consts/HighlightContext.md) contextId -> int | Get the inside function slot on the given context. 0 for a disabled a function | + | + |
 | Highlight_GetNearFadeDist | () -> float | Gets near fade dist |  | + |
-| Highlight_GetOutlineFunction | HighlightContext contextId -> int | Get the outline function slot on the given context. 0 for a disabled a function | + | + |
-| Highlight_GetOutlineRadius | HighlightContext contextId -> float | Get the outline radius on the given context | + | + |
-| Highlight_GetParam | HighlightContext contextId, int param -> vector | 'Get custom parameters on the given context. Parameters are shared between inside and outline functions | + | + |
-| Highlight_GetState | HighlightContext contextId -> int | Get custom state on the given context. Parameters are shared between inside and outline functions | + | + |
+| Highlight_GetOutlineFunction | [HighlightContext](../Consts/HighlightContext.md) contextId -> int | Get the outline function slot on the given context. 0 for a disabled a function | + | + |
+| Highlight_GetOutlineRadius | [HighlightContext](../Consts/HighlightContext.md) contextId -> float | Get the outline radius on the given context | + | + |
+| Highlight_GetParam | [HighlightContext](../Consts/HighlightContext.md) contextId, int param -> vector | 'Get custom parameters on the given context. Parameters are shared between inside and outline functions | + | + |
+| Highlight_GetState | [HighlightContext](../Consts/HighlightContext.md) contextId -> int | Get custom state on the given context. Parameters are shared between inside and outline functions | + | + |
 | Highlight_HideInside | float duration -> void | Hide inside function in a given duration. 0 to hide immediately | + | + |
 | Highlight_HideOutline | float duration -> void | Hide outline function in a given duration. 0 to hide immediately | + | + |
-| Highlight_IsAfterPostProcess | HighlightContext contextId -> bool | Tells if this highlight will be drawn after all post-processes | + | + |
-| Highlight_IsEntityVisible | HighlightContext contextId -> bool | Tells if this entity will be drawn | + | + |
+| Highlight_IsAfterPostProcess | [HighlightContext](../Consts/HighlightContext.md) contextId -> bool | Tells if this highlight will be drawn after all post-processes | + | + |
+| Highlight_IsEntityVisible | [HighlightContext](../Consts/HighlightContext.md) contextId -> bool | Tells if this entity will be drawn | + | + |
 | Highlight_PopPingedState | () -> void |  |  | + |
 | Highlight_PushPingedState | () -> void |  |  | + |
 | Highlight_ResetFlags | () -> void | Sets the highlight flags back to 0 |  | + |
-| Highlight_SetCurrentContext | HighlightContext contextId -> void | Set the current highlight context. 0 by default. Server has priority over client. Use context -1 to disable highlighting | + | + |
+| Highlight_SetCurrentContext | [HighlightContext](../Consts/HighlightContext.md) contextId -> void | Set the current highlight context. 0 by default. Server has priority over client. Use context -1 to disable highlighting | + | + |
 | Highlight_SetFadeInTime | float duration -> void | Sets fade in time for highlight |  | + |
 | Highlight_SetFadeOutTime | float duration -> void | Sets fade out time for highlight |  | + |
 | Highlight_SetFarFadeDist | float distance -> void | Sets far fade dist |  | + |
-| Highlight_SetFlag | HighlightFlag flag, bool value -> void | Sets a flag to active or not on a highlight |  | + |
-| Highlight_SetFunctions | HighlightContext contextId, int insideSlot, bool entityVisible, int outlineSlot, float outlineRadiusl, int state bool afterPostProcess -> void | Set function slots on the given context. Use slot 0 to disable a function | + | + |
+| Highlight_SetFlag | [HighlightFlag](../Consts/HighlightFlag.md) flag, bool value -> void | Sets a flag to active or not on a highlight |  | + |
+| Highlight_SetFunctions | [HighlightContext](../Consts/HighlightContext.md) contextId, int insideSlot, bool entityVisible, int outlineSlot, float outlineRadiusl, int state bool afterPostProcess -> void | Set function slots on the given context. Use slot 0 to disable a function | + | + |
 | Highlight_SetInheritHighlight | bool -> void | Set if this entity can inherit the highlighting settings from a parent entity if there is no local settings. False by default. Shared by all contexts | + | + |
 | Highlight_SetLifeTime | float duration -> void | Sets how long the highlight lasts for before fading out |  | + |
 | Highlight_SetNearFadeDist | float distance -> void | Sets near fade dist |  | + |
-| Highlight_SetParam | HighlightContext contextId, int, vector -> void| Set custom parameters on the given context. Parameters are shared between inside and outline functions | + | + |
-| Highlight_SetVisibilityType | HighlightVisibility visibility -> void | Sets visibility type for highlight |  | + |
+| Highlight_SetParam | [HighlightContext](../Consts/HighlightContext.md) contextId, int, vector -> void| Set custom parameters on the given context. Parameters are shared between inside and outline functions | + | + |
+| Highlight_SetVisibilityType | [HighlightVisibility](../Consts/HighlightVisibility.md) visibility -> void | Sets visibility type for highlight |  | + |
 | Highlight_ShowInside | float duration -> void | Show inside function in a given duration. 0 to show immediately | + | + |
 | Highlight_ShowOutline | float duration -> void | Show outline function in a given duration. 0 to show immediately | + | + |
 | Highlight_StartOn | () -> void | Starts the highlight as on no matter what |  | + |
@@ -238,7 +238,7 @@ C_BaseEntity: Root class of all entities
 | Minimap_SetCustomState | int -> void | A custom integer that can be RUI tracked on the client. Code behavior isn't affected by this variable. Must be positive or 0 | + |  |
 | Minimap_SetHeightTracking | bool -> void | Tell this entity whether to use height tracking behavior on client minimaps | + |  |
 | Minimap_SetObjectScale | float scale -> void | The size ratio of this icon relative to the size of the smaller side of client minimaps. Values around 0.1 are ideal | + |  |
-| Minimap_SetZOrder | MinimapZ z -> void | The z order of this entity on the minimap relative to all other minimap entities. Larger values draw on top. Must be positive or 0 | + |  |
+| Minimap_SetZOrder | [MinimapZ](../Consts/MinimapZ.md) z -> void | The z order of this entity on the minimap relative to all other minimap entities. Larger values draw on top. Must be positive or 0 | + |  |
 | MinimizeHibernation | () -> void | Makes this entity only hibernate beyond hibernation_far_dist | + |  |
 | NextMovePeer | () -> entity |  | + |  |
 | NotSolid | () -> void | Set the entity to be not solid | + |  |
@@ -321,7 +321,7 @@ C_BaseEntity: Root class of all entities
 | SetPassThroughDirection | float -> void | Sets the direciton the shot has to come from to pass the ent | + | + |
 | SetPassThroughFlags | int flags -> void | Sets flags for when pass through happens on this entity | + | + |
 | SetPassThroughThickness | float -> void | Sets the thickness of and entity for pass through bullets | + | + |
-| SetPhysics | MoveType type -> void | Sets the move type | + | + |
+| SetPhysics | [MoveType](../Consts/MoveType.md) type -> void | Sets the move type | + | + |
 | SetPreventCrits | bool -> void |  | + | + |
 | SetPusher | bool -> void | Sets whether this entity pushes other entities | + |  |
 | SetScriptName | string -> void | Sets the script_name of this entity | + | + |
@@ -331,7 +331,7 @@ C_BaseEntity: Root class of all entities
 | SetSize | vector, vector -> void |  | + |  |
 | SetSoundCodeControllerValue | float -> void | Set sound 'code' controller for sounds attached to entity. Overrides code value (if any). (The client-side version of this script hook is not for server entities!) | + | + |
 | SetSquadID | int newID -> void |  | + |  |
-| SetTakeDamageType | DamageType type -> void | Sets the take damage type | + | + |
+| SetTakeDamageType | [DamageType](../Consts/DamageType.md) type -> void | Sets the take damage type | + | + |
 | SetTeamMemberIndex | int newIndex -> void |  | + |  |
 | SetTitle | string -> void | Sets an entity's title. This may be displayed on client HUD's | + |  |
 | SetToSameParentAs | entity ent -> void | Sets this entity's move parent to be the same as the given entity | + | + |
@@ -341,7 +341,7 @@ C_BaseEntity: Root class of all entities
 | SetUsableDistanceOverride | float distance -> void | In order for an object to be usable, the player must be a within a certain distance of the object's bounding box. This sets an override for that distance. Must also set flag USABLE_USE_DISTANCE_OVERRIDE to enable. | + |  |
 | SetUsableFOV | float -> void | Set fov for this ent to use | + |  |
 | SetUsableFOVByDegrees | float -> void | Converts to cosine degrees | + |  |
-| SetUsablePriority | UsablePriority priority -> void | Sets the priority of a usable ent | + |  |
+| SetUsablePriority | [UsablePriority](../Consts/UsablePriority.md) priority -> void | Sets the priority of a usable ent | + |  |
 | SetUsableValue | int -> void | Sets the usable state by integer, which was earlier obtained from | + |  |
 | SetUsePromptSize | float -> void |  | + |  |
 | SetUsePrompts | string, string -> void | Sets the entity's hold use and press use prompts | + |  |
