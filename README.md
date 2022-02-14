@@ -2,6 +2,9 @@
 
 Type information that I'm not sure about is marked as _possibly_
 
+## Variables
+* [Variables](Variables.md)
+
 ## Important types
 
 * [C_BaseCombatCharacter](Types/C_BaseCombatCharacter.md)
