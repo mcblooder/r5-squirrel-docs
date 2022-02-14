@@ -4,6 +4,7 @@ Type information that I'm not sure about is marked as _possibly_
 
 ## Variables
 * [Variables](Variables.md)
+* [Untested Variables](UntestedVariables.md)
 
 ## Important types
 
